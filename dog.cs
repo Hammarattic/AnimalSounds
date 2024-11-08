@@ -1,16 +1,17 @@
 ﻿using NAudio.Wave;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AnimalSounds
 {
-    internal class dog: Animal
+    internal class Dog : Animal
     {
-        
+        // Constructor that sets the animal's name
+        public Dog(string name)
+        {
+            Name = name;
+        }
 
+        // Override Makesound to play sound and print message
         public override void Makesound()
         {
             using (var reader = new WaveFileReader(@"C:\Users\thobi\OneDrive\Skrivebord\csharp\AnimalSounds\Sounds\dog.wav"))
@@ -18,9 +19,8 @@ namespace AnimalSounds
             {
                 player.Init(reader);
                 player.Play();
-                Console.WriteLine("dog go vof");
+                Console.WriteLine("Dog goes Woof!");
             }
-           
         }
     }
 }
