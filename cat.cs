@@ -8,7 +8,7 @@ namespace AnimalSounds
         public override void Makesound()
         {
            
-            using (var reader = new WaveFileReader("Sounds/cat.wav"))
+            using (var reader = new WaveFileReader(@"C:\Users\thobi\OneDrive\Skrivebord\csharp\AnimalSounds\Sounds\cat.wav"))
             using (var player = new WaveOutEvent())
             {
                 player.Init(reader);

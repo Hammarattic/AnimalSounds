@@ -13,7 +13,7 @@ namespace AnimalSounds
 
         public override void Makesound()
         {
-            using (var reader = new WaveFileReader("Sounds/dog.wav"))
+            using (var reader = new WaveFileReader(@"C:\Users\thobi\OneDrive\Skrivebord\csharp\AnimalSounds\Sounds\dog.wav"))
             using (var player = new WaveOutEvent())
             {
                 player.Init(reader);
